@@ -27,7 +27,7 @@ Pod Lifecycle
 
 Pod Concepts
 -------------
---> Pod is ephemeral(lasting for a very short time) and won’t be rescheduled to a  new node once it dies.
+--> Pod is ephemeral(lasting for a very short time) and won’t be rescheduled to a  new node once it dies.---ephemiral means once pod crashed 
 --> You should not directly create/use Pod for deployment, Kubernetes have  controllers like Replica Sets, Deployment, Deamon sets to keep pod alive.
 
 
@@ -61,7 +61,7 @@ kubectl api-resources --namespaced=true
 How to list cluster level objects?
 ----------------------------------
 
-kubectl api-resources --namespaced=false
+kubectl api-resources --namespaced=false   =======display custer level objects
 
 
 
@@ -86,7 +86,8 @@ spec:
         value: <value>
         
 save: app1.yaml
-
+======================
+if any pod is not created first see des pod and after see the logs...
 apply: kubectl apply -f app1.yaml
 
 
@@ -152,6 +153,10 @@ spec:
 
 
 kubectl describe po <podName> -n <NameSpace>
+====================================================
+
+    kubectl get pod -n test-ns --show-labels
+   kubectl get pod -n test -o wide         ===ur appli which node running
 
 
 IQ] Before starting pod , i need to do sanity how to do?
