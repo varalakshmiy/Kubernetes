@@ -12,15 +12,18 @@ Unlike regular pods (managed by controllers like Deployments, ReplicaSets, or St
 
 2. Node-Specific: 
 -----------------
-Static Pods are defined on a specific node, and they cannot be scheduled or moved between nodes by the Kubernetes scheduler. They are "node-local" and are only visible to the Kubelet on that node.
+Static Pods are defined on a specific node, and they cannot be scheduled or moved between nodes by the Kubernetes scheduler. 
+They are "node-local" and are only visible to the Kubelet on that node.
 
 3. Self-Healing:  ********
 ----------------
-The Kubelet will automatically restart static pods if they fail or are deleted, as long as the pod specification still exists on the node. This makes static pods useful for system-level or infrastructure-related tasks (e.g., running a log collector or monitoring agent).
+The Kubelet will automatically restart static pods if they fail or are deleted, as long as the pod specification still exists on the node. 
+This makes static pods useful for system-level or infrastructure-related tasks (e.g., running a log collector or monitoring agent).
 
 4. Not Managed by Kubernetes API Server:
 ----------------------------------------
- Static pods do not appear in the Kubernetes API server’s pod list (`kubectl get pods`) by default. However, they are still visible on the node itself and can be seen via `kubectl describe node <node-name>` or in the Kubelet's log files.
+ Static pods do not appear in the Kubernetes API server’s pod list (`kubectl get pods`) by default. However, 
+they are still visible on the node itself and can be seen via `kubectl describe node <node-name>` or in the Kubelet's log files.
 
  Use Cases for Static Pods:
  ==========================
@@ -39,9 +42,11 @@ Static Pods are used to run critical components of Kubernetes, like the `kube-ap
  ======================
 1. Pod Specification File: The static pod specification is a YAML or JSON file that is saved directly to a specific directory on the node's filesystem.
 
-2. Kubelet Monitors Directory: The Kubelet continuously watches the directory for any changes to static pod specifications. When it detects a change (like a new pod specification), it will create or update the pod accordingly.
+2. Kubelet Monitors Directory: The Kubelet continuously watches the directory for any changes to static pod specifications. 
+When it detects a change (like a new pod specification), it will create or update the pod accordingly.
 
-3. Pod Lifecycle: The Kubelet manages the lifecycle of static pods. If a static pod crashes or is deleted, the Kubelet will automatically recreate the pod based on the specification file.
+3. Pod Lifecycle: The Kubelet manages the lifecycle of static pods. If a static pod crashes or is deleted, the Kubelet will automatically 
+recreate the pod based on the specification file.
 
  Example of a Static Pod
  =======================
@@ -50,7 +55,8 @@ Let’s walk through an example of creating a static pod on a node. We'll assume
 
 # Step 1: Create a Static Pod Definition File
 
-On the node where you want to deploy the static pod, create a YAML file called `nginx-static-pod.yaml` in the directory `/etc/kubernetes/manifests/` (This directory is the default location for static pods in many Kubernetes setups. You can check the Kubelet’s configuration if it's different).
+On the node where you want to deploy the static pod, create a YAML file called `nginx-static-pod.yaml` in the directory `/etc/kubernetes/manifests/`
+(This directory is the default location for static pods in many Kubernetes setups. You can check the Kubelet’s configuration if it's different).
 
 Here’s an example static pod definition for Nginx:
 
