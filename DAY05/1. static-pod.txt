@@ -1,6 +1,7 @@
  What is a Static Pod?
  ======================
-
+it is not regular pod,cannot scale static pods,fixed it in one node,static pod craeted directly in node itself only,usage of static pods is monitoring and logging purpose,if we delete static pod again created on same node.y we go for static pods is node monitoring,logging,  /etc/k8/manifest,entire control of satic pod kubelet will takecare.
+================================================================================================================================================================
 A Static Pod in Kubernetes is a pod that is not managed by the Kubernetes API server directly, but rather is managed by the Kubelet on a specific node. These pods are defined by configuration files that are placed directly on the node’s filesystem (typically in a specific directory), and the Kubelet on that node automatically manages these pods.
 
  Key Characteristics of Static Pods:
