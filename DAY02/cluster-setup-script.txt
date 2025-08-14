@@ -1,0 +1,1 @@
+https://kkdevops.hashnode.dev/kubernetes-cluster-setup-on-ubuntu-with-kubeadm-master-and-worker-nodes
