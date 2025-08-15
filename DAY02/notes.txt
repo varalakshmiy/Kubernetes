@@ -335,7 +335,7 @@ How to list all k8s resources?
 
 kubectl api-resources
 
-
+ls ~/.kube/config
 
 
 kubectl create namespace <NN>
