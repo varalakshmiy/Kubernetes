@@ -383,6 +383,7 @@ kubectl create namespace my-namespace
 ---------------------
 
 kubectl get namespaces  or kubectl get ns
+kubectl get pods  ====it display the defult namespace pods
 
 
 3. Viewing Namespace Details
