@@ -146,7 +146,7 @@ spec:
 
 
 kubectl exec -it -n test-ns javawebapp -- sh
-
+-install ping inside pod server====>apt update ,=====>apt install iputils-ping -y  ===============>
 ping 10.44.0.1
 
 
@@ -163,7 +163,7 @@ service Types
 
 1. ClusterIP
 ------------
-
+-interner pod to pod commu go for clusterip
 --> Exposes the service on a cluster-internal IP. Service is only reachable from within the cluster. This is the default Type.
 
 --> When we create a service we will get one Virtual IP (Cluster IP) it will get registered to the DNS(kube-dns). Using this Other PODS can find and talk the pods of this service using service name.
