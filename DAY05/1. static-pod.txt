@@ -6,7 +6,7 @@ A Static Pod in Kubernetes is a pod that is not managed by the Kubernetes API se
 
  Key Characteristics of Static Pods:
  ===================================
-
+=we can create multiple static pods in single node======
 1. Not Managed by the Kubernetes Scheduler: 
 -------------------------------------------
 Unlike regular pods (managed by controllers like Deployments, ReplicaSets, or StatefulSets), static pods are not scheduled by the Kubernetes scheduler. Instead, they are created and managed directly by the Kubelet on the node where the pod configuration resides.
