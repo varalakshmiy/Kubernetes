@@ -163,7 +163,7 @@ service Types
 
 1. ClusterIP
 ------------
--internal pod to pod commu go for clusterip
+->with in cluste commu---internal pod to pod commu go for clusterip
 --> Exposes the service on a cluster-internal IP. Service is only reachable from within the cluster. This is the default Type.
 
 --> When we create a service we will get one Virtual IP (Cluster IP) it will get registered to the DNS(kube-dns). Using this Other PODS can find and talk the pods of this service using service name.
