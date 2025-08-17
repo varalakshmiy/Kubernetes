@@ -247,6 +247,8 @@ spec:
 
 curl http://10.110.231.227:80 --> From outside pod
 
+>kubectl get ep -n prod
+
 
 2. NodePort
 -----------
@@ -293,7 +295,10 @@ spec:
 
 
 
-
+>kubectl apply -f nodeport-exp.yaml
+>kubectl get all -n prod -o wide --show-labels
+>kubectl describe service/javawebservice -n prod>kubectl get ep -n prod
+>kubectl get ep -n prod
 
 
 
