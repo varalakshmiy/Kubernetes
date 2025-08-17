@@ -248,6 +248,7 @@ spec:
 curl http://10.110.231.227:80 --> From outside pod
 
 >kubectl get ep -n prod
+>kubectl edit pod simple-web-app -n prod
 
 
 2. NodePort
