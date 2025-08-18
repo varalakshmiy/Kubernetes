@@ -1,6 +1,6 @@
 ReplicationController
 =====================
--if pod is crash there is a no way is create pod automatically. to overcome problem ,rc comes into picture
+-if pod is crash there is a no way is create pod automatically. to overcome problem ,rc comes into picture,rc make our pod always up.
 --> Replication Controller is one of the key features of Kubernetes, which is responsible for managing the pod lifecycle. It is responsible for making sure that the specified number of pod replicas are running at any point of time.
 
 --> A Replication Controller is a structure that enables you to easily create multiple pods, then make sure that that number of pods always exists. If a pod does crash, the Replication Controller replaces it.
