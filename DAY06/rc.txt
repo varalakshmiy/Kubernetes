@@ -58,3 +58,7 @@ IQ:  3 pods running under rc i want scale down to 2 how to do that?
  > kubectl scale rc javawebapprc --replicas 6 -n prod    ==increase pod
 >if want to make application down means make pods 0 still rc is there
 kubectl scale rc javawebapprc --replicas 0 -n prod
+======================================================
+iq:- pod rc diff
+-cluster ip nodeport diff,node port range
+-
