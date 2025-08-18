@@ -52,5 +52,6 @@ kubectl scale rc <rcName> --replicas 3 -n <NS>
 kubectl delete rc <rcName> -n <NS>
 
 
-
+IQ:  3 pods running under rc i want scale down to 2 how to do that?
   
+> kubectl edit rc javawebapprc -n prod
