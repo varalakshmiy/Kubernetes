@@ -118,8 +118,9 @@ spec:
     - port: 80
       targetPort: 8080
       nodePort: 30080
-
-
+=================================================================================================================
+-suppose we removed selector from above example throws an error " replicaset is <rsname>, invalid selector required value
+========================================================================================================================
 
 EX2 set based
 ==============
@@ -166,8 +167,9 @@ spec:
       nodePort: 30080
       
 
-
-
+Iq: diff b/w eqaulity base selector and set based selector.
+-euality supports rc and rs where as set supports only rs.
+-rc selector optional,rs selector manadatory.
 
 
 
