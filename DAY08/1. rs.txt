@@ -1,6 +1,6 @@
 ReplicaSet
 ==========
-
+when we deploy pod on node due to some other reason pod is crashed ,there is no chance to retain,wehave to recreate it to overcome that problem rc,rs comes nto pic.rs support both equality,set based selectors---where as rc support only equality base selector.
 --> ReplicaSet is the next-generation Replication Controller.
 
 --> The only difference between a ReplicaSet and a Replication Controller right now is the selector support.
