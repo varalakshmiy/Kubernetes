@@ -170,6 +170,7 @@ spec:
 Iq: diff b/w eqaulity base selector and set based selector.
 -euality supports rc and rs where as set supports only rs.
 -rc selector optional,rs selector manadatory.
+-always preferable rs set base selector only
 
 
 
