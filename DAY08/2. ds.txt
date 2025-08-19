@@ -84,6 +84,13 @@ spec:
         operator: Exists
         effect: NoSchedule
       containers:
+
+
+
+
+
+
+
       - name: nginx
         image: nginx
         ports:
