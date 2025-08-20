@@ -128,6 +128,7 @@ kubectl get all -n test-ns
 To check sucessfully rollout or not
 -----------------------------------
 kubectl rollout status deployment javawebappdep -n test-ns
+kubectl rollout status deployment javawebappdep -n test-ns
 
 To see the history
 ------------------
@@ -144,7 +145,12 @@ to describe the deployment
 
 kubectl describe deployment javawebappdep -n test-ns
 
+hw can check depoyment status
+================================
 
+to see the pod created in which image:
+======================================
+kubectl describe pod <podname> -n test-ns
 
 ==================================================================================
 
