@@ -1,4 +1,11 @@
-
+==============================
+-if we get any prolem in pod  container imge we cannot go with previous version of docker image,first down the application after that go to the previous version of image in rs.to overcome problem of rs deployment came into pic,
+================================
+iq: expln ci pipeline stages.: dev upload code into central repo,we already implement ci pipeline of jenkin server,jenkinspike the automatice code from github repo,jenkins already integrate with sonarqube server,it is generate sonarqube report also,bulild artifactor of the appli,we r keeing artifactory into nexus repo,for thar artifactory we r building docker image also,we r keeping all images into ECR
+github--->jenkins--->sonarqube--->build--->nexus--->image--->ECR(DTR--docker trused regi)
+---------------------------------------------
+task: build diff version imge pipeline push into dockerhub
+===============================
 Example:
 --------
 
