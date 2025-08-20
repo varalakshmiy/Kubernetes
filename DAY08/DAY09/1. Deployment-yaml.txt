@@ -54,14 +54,16 @@ kubectl apply -f abc.yaml
 
 kubectl get all -n test-ns
 
-To check sucessfully rollout or not
+To check sucessfully rollout or not---cmd to check appli successfully deployed--IQ
 -----------------------------------
 kubectl rollout status deployment <dep-Name> -n test-ns
+kubectl rollout status deployment javawebappdep -n test-ns
 
 To see the history
 ------------------
 kubectl rollout history deployment javawebappdep -n test-ns
 
+-i we r going to rs objec pod template will not ,pod template will not reflect,if we r going to deployment pod template will reflect.if image version change rs created with pods.
 
 To see the revision history
 ---------------------------
@@ -157,8 +159,15 @@ kubectl describe pod <podname> -n test-ns
 
 How to rollout to old revision?
 -------------------------------
+kubectl rollout history deployment javawebappdep -n test-ns --revision 1
+kubectl rollout history deployment javawebappdep -n test-ns
 
 kubectl rollout undo deployment javawebappdep -n test-ns --to-revision 1
+
+watch kubetcl get pods -n test-ns
+=============================================
+rolling update:
+-----------
 
 
 
