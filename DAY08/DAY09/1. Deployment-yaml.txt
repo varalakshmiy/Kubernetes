@@ -5,7 +5,10 @@ iq: expln ci pipeline stages.: dev upload code into central repo,we already impl
 github--->jenkins--->sonarqube--->build--->nexus--->image--->ECR(DTR--docker trused regi)
 ---------------------------------------------
 task: build diff version imge pipeline push into dockerhub
-===============================
+==================================================
+to see sprecific pod yaml file
+kubectl get pod javawebapprs-8zmdf -o yaml -n test-ns
+===============================================
 Example:
 --------
 
