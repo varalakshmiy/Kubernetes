@@ -1,3 +1,10 @@
+resource-quota
+--------------
+to find node has how much m/y we can find by using we can describe by using "node",by default every node has some defaults pods ,they allocate some m/y and cpu.
+> kubectl describe node ip-172-31-17-11
+-2 cpu ,1GB m/y
+>kubetcl get pod -A |grep -i 
+================================================
 apiVersion: apps/v1
 kind: Deployment
 metadata:
