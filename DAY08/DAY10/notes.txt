@@ -1,17 +1,20 @@
-resource-quota
+resource-quota: schedular will decidewhich node which has deploy  based on  cpu and m/y,pod is deployd,  i.e resource quota.
 --------------
-to find node has how much m/y we can find by using we can describe by using "node",by default every node has some defaults pods ,they allocate some m/y and cpu.
+to find node has how much m/y we can find by using we can describe by using "node",by default every node has some defaults pods ,they allocate some m/y and cpu.y pod is pending state becaz of pending state issue.
 > kubectl describe node ip-172-31-17-11
 -2 cpu ,1GB m/y
 >kubetcl get pod -A |grep -i 
 ================================================
+>kubectl scale deploy javawebappdeploy -n test-ns --replica 2
+---------------------------------------------------------------
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: javawebappdeploy
   namespace: test-ns
 spec:
-  replicas: 5
+  replicas: 2
   strategy:
     type: RollingUpdate
   selector:
@@ -29,10 +32,10 @@ spec:
         resources:
           requests:
             memory: "256Mi"
-            cpu: "600m"
+            cpu: "400m"
           limits:
             memory: "256Mi"
-            cpu: "900m"
+            cpu: "800m"
         ports:
         - containerPort: 8080 
 ---
@@ -53,5 +56,13 @@ spec:
 
 
    
+Iq: my pod is keep on restarting becaz of becaz of quota(m/y,cpu) issue crashloopbackup of errror
+IQ: diff b/e req and limits
+--------------------------------
+req we r defing m/y and cpu,wt m/y,cpu define inside req using m/y,cpu to bring up container,maximu we cannot go for beyond limit .we cannot define limit reminig space occupy in the node.
+------------------------------------
+-00mkilled===>it is memory issue
+-5 pod deploy 3 running 3 in pending state i.e quots issue.hw trouble shoot one pod in pending state frs check describe pod check "events state" ,still pending sate chek logs ,any appli side isue find it in logs.
+-kubectl logs
 
 
