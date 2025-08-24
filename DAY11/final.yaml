@@ -1,3 +1,8 @@
+2 types of scaling vertical scaling and horizontal scaling
+diff scaling is: no of replicas(pods) increase or decrease is scaling
+
+
+-----------------------------------------------------
 #deployment
 apiVersion: apps/v1
 kind: Deployment
