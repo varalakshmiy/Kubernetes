@@ -1,6 +1,9 @@
 2 types of scaling vertical scaling and horizontal scaling
-diff scaling is: no of replicas(pods) increase or decrease is scaling
-
+diff scaling is: no of replicas(pods) increase or decrease is scaling,we can increase pods,decrease pods,
+-nodes also incre and decrease
+2 of scaling vertical,horizontal(hpa)
+1.manual scaling also(not recomended)   --->kubectl scale deploy <deployname> -n test-ns --replica 5
+hpa---automatic pod increase and decrease done by hpa
 
 -----------------------------------------------------
 #deployment
