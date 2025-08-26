@@ -1,3 +1,5 @@
+https://k8spoddeploy.hashnode.dev/kubernetes-flow-from-containers-to-deployment
+
 what is a pod?
 ===============
 --> A pod is the smallest building block or basic unit of scheduling in Kubernetes.
