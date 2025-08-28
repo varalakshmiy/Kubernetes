@@ -1,6 +1,7 @@
 k8s volumes
 ============
-
+-emptydir,hostpath,nfs,persistent volume ,persistence volume claims
+-in emptydir store data in mongo db in /data/db ,once pod is deleted data loss will happen so pod also create in diff node also.
 
 apiVersion: apps/v1
 kind: ReplicaSet
@@ -153,7 +154,10 @@ spec:
 
 
 ==================
-
+-host path volumes daa in consistency 
+==========================
+diff b/w nfs,hostpath
+---------------------------
 NFS volumes in k8s
 ===================
 
