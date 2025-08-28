@@ -101,7 +101,7 @@ kubectl exec -it <pod-Name> -n <NS> -- ls /data/db
 ======================================================
 
 
----> After adding host path volumes
+---> After adding host path volumes,i am set up with hostpathvolumes,in my pro we dont have pv,pvc,
 
 
 
