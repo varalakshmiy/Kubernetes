@@ -225,7 +225,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: mongodb
-  namespace: prod
+  namespace: test-ns
 spec:
   selector:
     matchLabels:
@@ -260,7 +260,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongosvc
-  namespace: prod
+  namespace: test-ns
 spec:
   type: ClusterIP
   selector:
