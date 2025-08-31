@@ -310,7 +310,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: mongodb
-  namespace: prod
+  namespace: test-ns
 spec:
   selector:
     matchLabels:
@@ -343,7 +343,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongosvc
-  namespace: prod
+  namespace: test-ns
 spec:
   type: ClusterIP
   selector:
@@ -356,7 +356,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sprinapp
-  namespace: prod
+  namespace: test-ns
 spec:
   replicas: 2
   selector:
@@ -391,7 +391,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: springappsvc
-  namespace: prod
+  namespace: test-ns
 spec:
  type: NodePort
  selector:
@@ -402,7 +402,7 @@ spec:
    
 
 NOTE: pv and pvc are 1 to 1 relationship
-
+-y my pod pending state ,becaz pvc not available,if pvc is available y pod pending state.becaz labels mismatch.
 
           
 
