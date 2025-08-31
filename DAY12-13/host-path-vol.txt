@@ -275,6 +275,9 @@ spec:
 
 --> PV and PVC
 =================
+-pv is cluster level,pvc is namespace level object,internelly maintain pod lifecycle pv and pvc r 2 objects.we can maintain volumes in k8 cluster throuch pv and pvc.
+-pvc directly interact with pvc ,pv and pvc bounded with storage class,size.,pod bounded with pvc,maintain volumelifecycle,we can req storage pv through pvc ,
+-k8 cluster there r n no of pv and pvc is there.in one pv atached(boundded) with another pvc.one-to-one relationship.
 
 apiVersion: v1
 kind: PersistentVolume
