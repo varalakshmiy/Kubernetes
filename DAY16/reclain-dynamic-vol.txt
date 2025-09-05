@@ -31,7 +31,7 @@ spec:
   accessModes:
     - ReadWriteMany  # NFS supports this
   nfs:
-    server: 172.31.40.109  # Your NFS server IP
+    server: 172.31.26.113  # Your NFS server IP
     path: /mnt/nfs_share  # Path on your NFS server
   persistentVolumeReclaimPolicy: Delete  # or Delete, depending on your use case
 --------------------------------------------------------------------------------------
@@ -39,7 +39,7 @@ spec:
  attache volume pv with pvc second stateof (pv) -bounded state
  dettached(delete) pvc with pv   third stateof (pv)- release
 
-
+low env testing go for delete.low run we can go for retain policies.
 
 
 
@@ -47,7 +47,7 @@ spec:
 
 Dynamic volumes with nfs
 ========================
-
+-storage class is a cluster level obj.like volumes.when we create pvc automatically storage class created pv also,when we delete pvc automatically sc is deleted pv also.
 
 ---
 kind: ServiceAccount
