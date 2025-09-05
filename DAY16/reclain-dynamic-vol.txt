@@ -8,7 +8,9 @@ Reclaim policies
 
  Delete: With the "Delete" reclaim policy, when a PVC is deleted, the associated PV is also deleted, along with the underlying storage. This means that all data is lost.
 
-
+     delete  pv(volume) ---->available
+             pv(volume) ---->bound
+             pv(volume) ---->failed
 
  Recycle(Deprecated): The "Recycle" policy allowed for a PV to be scrubbed (data deleted) and then made available again when released. However, this feature has been deprecated in favor of more explicit data management practices. 
 
