@@ -1,6 +1,6 @@
 Reclaim policies
 ----------------
- Retain: When a PV is released from a PVC with a "Retain" reclaim policy, the volume is not automatically deleted. Instead, it remains in the cluster in a released state. The underlying storage is preserved, allowing you to manually reclaim or manage the data.
+ Retain(default): When a PV is released from a PVC with a "Retain" reclaim policy, the volume is not automatically deleted. Instead, it remains in the cluster in a released state. The underlying storage is safe, allowing you to manually reclaim or manage the data. adv is data safe.
 
  --> Default Reclaim policy 
 
@@ -29,6 +29,10 @@ spec:
     server: 172.31.40.109  # Your NFS server IP
     path: /mnt/nfs_share  # Path on your NFS server
   persistentVolumeReclaimPolicy: Delete  # or Delete, depending on your use case
+--------------------------------------------------------------------------------------
+-when we create a vol first stateof (pv)     -available state
+ attache volume pv with pvc second stateof (pv) -bounded state
+ dettached(delete) pvc with pv   third stateof (pv)- release
 
 
 
