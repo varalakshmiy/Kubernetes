@@ -17,8 +17,9 @@ Suppose that a Pod is running our application inside a container, but due to som
 application is not responding to our requests, and stuck in error state.
 
 Liveness probe checks the container health as we tell it do, and if  some reason the liveness probe fails, it restarts the container.
+-if container failure based on values we define,it restart container.
 
-Readiness Probe
+Readiness Probe: this is container is ready or not to accept traffic.
 ---------------
 This type of probe is used to detect if a container is ready to accept traffic. You can use this probe to manage which pods are used as backends for load balancing services. 
 
@@ -98,7 +99,10 @@ spec:
         readinessProbe:
           httpGet:
             path: /ready  # Adjust based on your application's readiness check endpoint
+
             port: 8080
           initialDelaySeconds: 15
           periodSeconds: 5
           failureThreshold: 3
+--liveness probe: pod is runing after 30 sec container up,every 10 sec check health status,3 times fail container restart,after restrating container again it will wait 30 sec,every 10sec check health status.
+readynessprobe: applitraffic  acceptd or not.3 times checking after appli traffic not alllowed.
