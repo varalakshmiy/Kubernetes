@@ -15,7 +15,8 @@ Reclaim policies
 
 Example:
 --------
-
+-create pv,mongodbpod,pvc
+----------------
 apiVersion: v1
 kind: PersistentVolume
 metadata:
