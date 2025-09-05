@@ -3,7 +3,9 @@ Reclaim policies
  Retain(default): When a PV is released from a PVC with a "Retain" reclaim policy, the volume is not automatically deleted. Instead, it remains in the cluster in a released state. The underlying storage is safe, allowing you to manually reclaim or manage the data. adv is data safe.
 
  --> Default Reclaim policy 
-
+ retain  pv(volume) ---->available
+             pv(volume) ---->bound
+             pv(volume) ---->released
 
 
  Delete: With the "Delete" reclaim policy, when a PVC is deleted, the associated PV is also deleted, along with the underlying storage. This means that all data is lost.
