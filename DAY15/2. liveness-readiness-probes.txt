@@ -105,4 +105,4 @@ spec:
           periodSeconds: 5
           failureThreshold: 3
 --liveness probe: pod is runing after 30 sec container up,every 10 sec check health status,3 times fail container restart,after restrating container again it will wait 30 sec,every 10sec check health status.
-readynessprobe:first 15sec wait,after every 5sec applitraffic  acceptd or not.3 times checking after appli traffic not alllowed.
+readynessprobe:applitraffic  allow or not.first 15sec wait,after every 5sec ,3 times checking after appli traffic not alllowed.
