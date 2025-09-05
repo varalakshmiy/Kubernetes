@@ -1,7 +1,10 @@
+How much time should I send the request?when pod is up continuously send req,container throw some issues,when pod up dev wait for sometime after send req,intial delay sec ,mention in those time in yaml file,liveness prob check appli health status,
+---------------------------------
 Liveness probe and Readiness probe
 ==================================
 
---> Liveness and Readiness Probes are mechanisms in Kubernetes used to check the health and status of containers within a Pod. They help ensure that applications are running as expected and can serve traffic.
+--> Liveness and Readiness Probes are mechanisms in Kubernetes used to check the health and status of containers within a Pod. 
+They help ensure that applications are running as expected and can serve traffic.
 
 
 
