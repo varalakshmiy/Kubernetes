@@ -47,7 +47,7 @@ low env testing go for delete.low run we can go for retain policies.
 
 Dynamic volumes with nfs
 ========================
--storage class is a cluster level obj.like volumes.when we create pvc automatically storage class created pv also,when we delete pvc automatically sc is deleted pv also.
+-storage class is a cluster level obj.like volumes.when we create pvc automatically storage class created pv also,when we delete pvc automatically sc is deleted pv also.sc internally use reclaim policy delete.
 
 ---
 kind: ServiceAccount
