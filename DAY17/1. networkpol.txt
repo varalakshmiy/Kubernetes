@@ -1,4 +1,4 @@
-Network Policies
+Network Policies: it is namespace level object.
 ================
 
 --> Network Policies in Kubernetes are used to control the communication between pods and   external endpoints. 
