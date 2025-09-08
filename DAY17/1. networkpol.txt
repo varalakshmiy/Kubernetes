@@ -1,4 +1,4 @@
-Network Policies: it is namespace level object.
+Network Policies: it is namespace level object.n/w policies is which pod commu with which pod through n/w policies we can define.
 ================
 
 --> Network Policies in Kubernetes are used to control the communication between pods and   external endpoints. 
@@ -187,7 +187,8 @@ step 2:
     curl -v telnet://mongosvc:27017
 
 step 3:
-    deploy nginx in default ns and check the connectivity
+    deploy nginx in default ns and check the connectivit
+----------------------------------------------------------
 
 apiVersion: v1
 kind: Pod
