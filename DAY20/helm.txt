@@ -20,12 +20,16 @@ Repository: Helm charts can be stored in repositories, which are collections of 
 2. Architecture
 ----------------
 Helm operates in a client-server model:
+diff bb/w helm2 and helm3
+-------------------------
 
-helm 2:
+helm 2
+------
 
 https://www.google.com/search?q=helm+in+k8s+2&sca_esv=9c1db43462cf1df4&rlz=1C1UEAD_enIN1101IN1102&udm=2&biw=1440&bih=825&sxsrf=ADLYWIK4Xt_7ap01lm4VoujMDzvZC5TY6Q%3A1728902469006&ei=RfUMZ5ILsZ7j4Q__5ILIAg&ved=0ahUKEwjSwZDM142JAxUxzzgGHX-yACkQ4dUDCBA&uact=5&oq=helm+in+k8s+2&gs_lp=Egxnd3Mtd2l6LXNlcnAiDWhlbG0gaW4gazhzIDJIpQ5Q7AJYkgxwAXgAkAEAmAFhoAGRBaoBATe4AQPIAQD4AQGYAgWgAq8DwgIKEAAYgAQYQxiKBcICBRAAGIAEwgIEECMYJ8ICBhAAGAcYHsICCBAAGAUYBxgewgIIEAAYBxgIGB7CAgYQABgFGB7CAgYQABgIGB6YAwCIBgGSBwMyLjOgB_wd&sclient=gws-wiz-serp#vhid=CnN5ezLxGwlb8M&vssid=mosaic
 
 helm 3:
+-------
 
 https://www.google.com/search?q=helm+in+k8s+3+archetecture&sca_esv=9c1db43462cf1df4&rlz=1C1UEAD_enIN1101IN1102&udm=2&biw=1440&bih=825&sxsrf=ADLYWILeu84H6o3S6g8w1f-ITRaOqfA84Q%3A1728902522703&ei=evUMZ9jNKsKW4-EPmq6auQs&ved=0ahUKEwjY8t3l142JAxVCyzgGHRqXJrcQ4dUDCBA&uact=5&oq=helm+in+k8s+3+archetecture&gs_lp=Egxnd3Mtd2l6LXNlcnAiGmhlbG0gaW4gazhzIDMgYXJjaGV0ZWN0dXJlSJ8lUOEBWPojcAF4AJABAJgB0QGgAZkMqgEFNS43LjG4AQPIAQD4AQGYAgCgAgCYAwCIBgGSBwCgB8kE&sclient=gws-wiz-serp#vhid=HShMz9xvTEjAwM&vssid=mosaic
 
@@ -48,21 +52,21 @@ rm -rf ~/.config/helm
 
 rm get_helm.sh
 
-5. Chart Structure
-------------------
+5. Chart Structure: IQ: explain teh helm chart directory structure.
+----------------------------------------------------------
 
 A typical Helm chart structure looks like this:
 
 jio-stg-om-chart/
   ├── Chart.yaml        # Metadata about the chart
-  ├── values.yaml       # Default configuration values for templates
+  ├── values.yaml       # Default configuration values for templates(chart background values store)
   ├── charts/           # Subcharts (if any)
-  └── templates/        # Template files for Kubernetes resources
+  └── templates/        # Template files for Kubernetes resources(store all yaml files)
       ├── deployment.yaml   
       ├── service.yaml
       └── pv.yaml
 
-
+IQ: where define all yaml files inside "template"
 
 
 
