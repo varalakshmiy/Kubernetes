@@ -1,3 +1,4 @@
+iq:
 Network Policies: it is namespace level object.n/w policies is which pod commu with which pod through n/w policies we can define.
 ================
 
