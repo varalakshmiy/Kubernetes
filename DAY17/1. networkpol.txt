@@ -5,8 +5,8 @@ Network Policies: it is namespace level object.n/w policies is which pod commu w
 --> They are a way to define rules that govern how pods can connect to each other and to other network endpoints. 
 --> This can enhance the security of your applications by restricting access and ensuring that only authorized traffic is allowed.
 
-
-
+Iq: one pod commu with orher diff ns using fully qaulified domain.
+Iq: y my microservice is not able to cnnect with db ,we can restrict in the n/w policies.
 Key Concepts of Network Policies
 ---------------------------------
 Namespaces: Network Policies are applied within a specific namespace. You can create different policies for different namespaces.
