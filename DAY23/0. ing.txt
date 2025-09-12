@@ -1,0 +1,53 @@
+Ingress in Kubernetes
+
+Definition:
+Ingress is an API object in Kubernetes that manages external access to services within a cluster, usually HTTP/HTTPS. 
+It provides a single entry point to route traffic to multiple services based on rules.
+
+Key Points:
+1. Single Entry Point - Acts like a gateway for all external requests.
+2. Requires Ingress Controller - NGINX, HAProxy, Traefik etc. implement the rules.
+3. Routing Rules - Based on hostnames (shop.example.com) or paths (/cart, /orders).
+4. TLS/SSL Termination - Can handle HTTPS traffic using TLS certificates.
+5. Load Balancing - Provides HTTP-level load balancing across backend pods.
+
+Example Ingress YAML:
+-----------------------------------
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: shop-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: shop.example.com
+    http:
+      paths:
+      - path: /cart
+        pathType: Prefix
+        backend:
+          service:
+            name: cart-service
+            port:
+              number: 80
+      - path: /orders
+        pathType: Prefix
+        backend:
+          service:
+            name: order-service
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - shop.example.com
+    secretName: shop-tls-secret
+-----------------------------------
+
+Simple Explanation:
+Without Ingress: Each service needs a LoadBalancer or NodePort (costly and complex).
+With Ingress: One entry point + smart routing to different services (simpler and cheaper).
+
+Example Routing:
+- shop.example.com/cart  --> Cart service
+- shop.example.com/orders --> Orders service
