@@ -1,4 +1,7 @@
-
+can u pls explain rbac:hw can u secure ur k8 cluster.how u give access to users,how much u have access.
+authentication: give access to enter into k8 cluster.
+autherization:wt type of services he has to give permiss to access.
+cluster role,cluster rolebiding is a cluster level object.
 
 
 RBAC
@@ -11,7 +14,7 @@ Key Components
 
 Role: Defines a set of permissions within a specific namespace. It grants access to resources like pods, deployments, etc.
 
-RoleBinding: Grants the permissions defined in a Role to a user or a group within a specific namespace.
+RoleBinding: Grants the permissions defined in a Role to a user or a group within a specific namespace.role,role binding namespace level binding
 
 ClusterRole: Similar to a Role but applies across the entire cluster. It can be used for non-namespaced resources or for cluster-wide permissions.
 
@@ -95,7 +98,7 @@ format: table
 aws sts get-caller-identity
 
 aws eks list-clusters
-aws eks update-kubeconfig --name EKS-Demo123 --region ap-southeast-1
+aws eks update-kubeconfig --name my-demo-cluster --region us-west-1
 
 
 step 5: create eks read-only policy and attach to the user
