@@ -4,3 +4,4 @@ monolethic vs microservice
   each module developed independently,each module developed diff language also,there is no impact on other services.fast deployment,
 
 frst understand module commu how to connect each module using old ticket 
+gradle build tool---need to learn
