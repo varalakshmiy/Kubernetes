@@ -49,5 +49,5 @@ Without Ingress: Each service needs a LoadBalancer or NodePort (costly and compl
 With Ingress: One entry point + smart routing to different services (simpler and cheaper).
 
 Example Routing:
-- shop.example.com/cart  --> Cart service
+- shop.example.com/cart(ingress controler)  --> (k8 ingress service)Cart service
 - shop.example.com/orders --> Orders service
