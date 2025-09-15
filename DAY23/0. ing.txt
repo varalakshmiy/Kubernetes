@@ -1,4 +1,4 @@
-route traffice to every serviceIngress in Kubernetes
+route traffice to every serviceIngress in Kubernetes,ns level object
 
 Definition:
 Ingress is an API object in Kubernetes that manages external access to services within a cluster, usually HTTP/HTTPS. 
