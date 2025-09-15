@@ -3,7 +3,7 @@ route traffice to every serviceIngress in Kubernetes
 Definition:
 Ingress is an API object in Kubernetes that manages external access to services within a cluster, usually HTTP/HTTPS. 
 It provides a single entry point to route traffic to multiple services based on rules.
--it is a one layer of security in k8 cluster.we send req to eks cluster with help of ingress,high secure no need to create no of lb,we can route traffic to internelly,we have an k8 object ingress.route traffic to every service.
+-it is a one layer of security in k8 cluster.we send req to eks cluster with help of ingress,high secure no need to create no of lb,we can route traffic to internelly,we have an k8 object ingress.route traffic to every service.there r so many nginx like f5,nginx.
 Key Points:
 1. Single Entry Point - Acts like a gateway for all external requests.
 2. Requires Ingress Controller - NGINX, HAProxy, Traefik etc. implement the rules.
