@@ -150,7 +150,8 @@ kubectl exec -it -n test-ns javawebapp -- sh
 ping 10.44.0.1
 
 
-service: A service is responsible for making our Pods discoverable inside the network or exposing them to the internet. A Service identifies Pods by its LabelSelector.
+service: A service is responsible for making our Pods discoverable inside the network or exposing them to the internet. 
+A Service identifies Pods by its LabelSelector.
 
 
 
