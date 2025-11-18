@@ -2,7 +2,8 @@ DaemonSet
 =========
 if want to (watch) monitor every node in k8 ,we want to see logs of every node if we want every node logs we need to install s/w,if we configure ds in k8 we can
 =============================
-A DaemonSet in Kubernetes is a type of controller that ensures a copy of a specific pod runs on every node (or some nodes) in a cluster. This is particularly useful for applications that need to run background tasks or provide services on all nodes, such as log collectors, monitoring agents, or network proxies.
+A DaemonSet in Kubernetes is a type of controller that ensures a copy of a specific pod runs on every node (or some nodes) in a cluster. 
+This is particularly useful for applications that need to run background tasks or provide services on all nodes, such as log collectors, monitoring agents, or network proxies.
 
 Key Features of DaemonSets:
 ===========================
