@@ -173,5 +173,6 @@ Iq: diff b/w eqaulity base selector and set based selector.
 -always preferable rs set base selector only
 
 
-
+>kubectl get pod <podname> -o yaml -n test-ns  ==================see the yaml file of the pod 
+kubectl describe pod <podname> -n test-ns===== see the image which image is created in the pod
  
