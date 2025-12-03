@@ -2,6 +2,8 @@ k8s volumes
 ============
 -emptydir,hostpath,nfs,persistent volume ,persistence volume claims
 -in emptydir store data in mongo db in /data/db ,once pod is deleted data loss will happen so pod also create in diff node also.
+hostpath volume: data loss to overcome we r goingto hostpath volume.pod recove and pod data recover we r going to host path volume. 
+-------------
 volume:
 ---------
 apiVersion: apps/v1
