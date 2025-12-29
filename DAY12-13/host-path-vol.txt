@@ -196,11 +196,9 @@ sudo chmod 777 -R /mnt/nfs_share/
 
 step 6: Assign the server access to the clients through NFS export file.
 
-
 sudo vi /etc/exports
 
 /mnt/nfs_share/ *(rw,sync,no_subtree_check,no_root_squash)
-
 
 step 7: export the shared directory
 
